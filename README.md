@@ -12,6 +12,15 @@ an injection from client to database reveals multi-layer problems.
 - ❌ Use parameterized SQL queries
 - ✅ Parameterized queries (ORM), server + client-side input validations
 
+## Getting Started
+
+This repo should be entirely Markdown files (no executable code), so you should be able to peruse
+the whole thing just like a collection of docs. However, for offline (or off GitHub) viewing, there
+are a few tools that can make things better.
+
+- Markdown Mermaid support - VSCode extension: [https://github.com/mjbvz/vscode-markdown-mermaid](https://github.com/mjbvz/vscode-markdown-mermaid)
+
+
 ## Scenarios
 
 ### OWASP Top 10
