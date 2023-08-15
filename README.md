@@ -18,8 +18,21 @@ This repo should be entirely Markdown files (no executable code), so you should 
 the whole thing just like a collection of docs. However, for offline (or off GitHub) viewing, there
 are a few tools that can make things better.
 
-- Markdown Mermaid support - VSCode extension: [https://github.com/mjbvz/vscode-markdown-mermaid](https://github.com/mjbvz/vscode-markdown-mermaid)
+> Note: I am slowly moving diagrams from draw.io to Mermaid docs. So, please bear with me on the 
+> progress and use the applicable viewing tool.
 
+### Optional Tools
+
+- Markdown Mermaid support - VSCode extension: [https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
+  - 🧑‍💻 repo: [https://github.com/mjbvz/vscode-markdown-mermaid](https://github.com/mjbvz/vscode-markdown-mermaid)
+- Draw.io support - VSCode extension: [https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+  - 🧑‍💻 repo: [https://github.com/hediet/vscode-drawio](https://github.com/hediet/vscode-drawio)
+
+### Other Notes
+
+- Mermaid docs: [http://mermaid.js.org/](http://mermaid.js.org/)
+- Mermaid, flowchart syntax: [https://mermaid.js.org/syntax/flowchart.html#dotted-link](https://mermaid.js.org/syntax/flowchart.html#dotted-link)
+- Draw.io: [https://www.drawio.com/](https://www.drawio.com/)
 
 ## Scenarios
 
