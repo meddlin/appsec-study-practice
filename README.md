@@ -1,101 +1,25 @@
+# AppSec Study Practice
 
-Focus:
-- distributed systems
-- Design
-- threat vectors
-- why items were chosen
-- knowing how data flows
+Diagrams I've used to document and study where common AppSec vulnerabilities typically lie within 
+an application architecture. This isn't meant to be 1 vuln == 1 line of code. Rather, this details 
+what pieces of architecture are involved in mitigating a type of vulnerability.
 
+**Example: SQL Injection**
 
-Requirements
-- 300TB of key-value, read-only data
-- keys are small
-  - keys: 32-bytes data
-  - values: 100-bytes data
-- 10TB disks
-  - 50MB random read rates
-- 32GB of RAM
+While using parameterized queries is commonly referred to as the mitigation against SQL injection, 
+an injection from client to database reveals multi-layer problems.
 
-- assuming 4-, 6-, or 8-core CPUs?
+- ❌ Use parameterized SQL queries
+- ✅ Parameterized queries (ORM), server + client-side input validations
 
-- Solution on commodity hardware
-- Can't use "cloud-centric" solution choices (i.e. BigQuery)
+## Scenarios
 
+### OWASP Top 10
 
+Shows possible problem areas for each of the OWASP Top 10 vulnerability categories.
 
+### Logging Structure
 
-
-
-
-Why multi-node database?
-
-- Reason: Increased random access performance
-- 300TB of data is a lot for a single server to access all at once
-    - 30 x 10TB disks
-    - Problem: could overload disk head seek times, if data requested isn't sequential
-
-- Reason: increased redundancy
-  - We don't want a single point of failure for our entire database
-
-
-Why multiple instance of API?
-
-- handle more connections to database
-- split user demand over webservers
-
-
-
-Why API Gateway?
-
-- single point for authN/authZ
-  - reduces attack surface for authentication attacks
-  - instead of updating, maintaining this service on every API endpoint
-
-- enable serving multiple versions of the API
-
-
-Why multiple front-end web servers?
-- ability for A/B testing
-- serve multi-regional users
-
-
-
-
-
-
-
-### Hosts
-
-- Server/webservers
-  - OS: https://www.debian.org/
-
-- API Gateway
-  - KrakenD: https://www.krakend.io/open-source/
-
-
-
-### OWASP Resources
-
-- OWASP Secure Headers Project: https://owasp.org/www-project-secure-headers/
-
-- OWASP API Security Top 10: https://owasp.org/www-project-api-security/
-
-
-### Other Resources
-
-- Storing user passwords/credentials: https://nakedsecurity.sophos.com/2013/11/20/serious-security-how-to-store-your-users-passwords-safely/
-  - avoid DES, MD5, SHA-1
-  - explains hashing, salting needs
-  - "hash-stretching"
-
-
-- Cache busting: https://www.keycdn.com/support/what-is-cache-busting
-  - Good web development technique
-  - Also, can force updates when we patch XSS vulns
-
-
-CORS vs CSP: https://www.devonblog.com/security/difference-between-cors-and-csp-security-headers/
-- (Cross-origin request sharing vs. Content-security policy)
-- CORS is about data sharing/communication between domains
-- CSP is about defining what content can run on the domain
-- further reading: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+Scenario: an application has a key-value store, an API layer, and a web front-end. Then we detail
+other pieces of supporting architecture that could be deployed, and determine what potential 
+threats may appear across this architecture.
