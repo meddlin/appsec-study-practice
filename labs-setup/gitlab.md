@@ -7,6 +7,21 @@ operations.
 
 Configure accordingly.
 
+## Docker installation
+
+[https://docs.gitlab.com/ee/install/docker.html](https://docs.gitlab.com/ee/install/docker.html)
+
+### Vi Editor Tips
+
+Most docker containers don't have text-based editors available other than vi. So, having a list of 
+commands will be handy when/if making config changes inside of them is needed.
+
+[https://www.redhat.com/sysadmin/introduction-vi-editor](https://www.redhat.com/sysadmin/introduction-vi-editor)
+
+## Steps after installing GitLab
+
+[https://docs.gitlab.com/ee/install/next_steps.html](https://docs.gitlab.com/ee/install/next_steps.html)
+
 ## Resetting Admin password
 
 Reset GitLab CE administrator password via Ruby console
@@ -60,5 +75,11 @@ GitLab Docs
 
 > NOTE: I don't have this working yet. This is just a collection of resources I've found useful so far.
 
+GitLab docs, SMTP settings
+
+- [https://docs.gitlab.com/omnibus/settings/smtp.html](https://docs.gitlab.com/omnibus/settings/smtp.html)
+
 GitLab Docs, SMTP configuration examples: [https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#example-configuration](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#example-configuration)
 - Specifically, this one example for Gmail: [https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#gmail](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#gmail)
+
+This person had some challenges configuring GitLab to send email via Gmail SMTP, and there are some good tips in here: [https://forum.gitlab.com/t/using-gmail-to-send-email/710](https://forum.gitlab.com/t/using-gmail-to-send-email/710)
