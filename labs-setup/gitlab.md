@@ -54,3 +54,11 @@ From bitnami
 GitLab Docs
 
 - [https://docs.gitlab.com/ee/security/reset_user_password.html#reset-your-root-password](https://docs.gitlab.com/ee/security/reset_user_password.html#reset-your-root-password)
+
+
+## Configure Email
+
+> NOTE: I don't have this working yet. This is just a collection of resources I've found useful so far.
+
+GitLab Docs, SMTP configuration examples: [https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#example-configuration](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#example-configuration)
+- Specifically, this one example for Gmail: [https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#gmail](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/doc/settings/smtp.md#gmail)
